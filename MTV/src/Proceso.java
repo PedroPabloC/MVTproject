@@ -1,14 +1,18 @@
+
 public class Proceso {
     private String nombre;
     private int tamanio;
     private int tiempoLlegada;
     private int duracion;
+    private Boolean estado;
+
 
     public Proceso(String nombre, int tamanio, int tiempoLlegada, int duracion) {
         this.nombre = nombre;
         this.tamanio = tamanio;
         this.tiempoLlegada = tiempoLlegada;
         this.duracion = duracion;
+        this.estado = false;
     }
 
     public String getNombre() {
@@ -41,6 +45,14 @@ public class Proceso {
 
     public void setTiempoFinalia(int duracion) {
         this.duracion = duracion;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
     }
 
     
