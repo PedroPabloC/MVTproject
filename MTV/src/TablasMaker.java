@@ -42,8 +42,8 @@ public class TablasMaker {
                 for(int j = i+1; j<ram.length; j++){
                     String inicio = ram[i];
                     if(inicio != ram[j]){
-                        aux.add(new Tabla(i,((j+1)-i), inicio));
-                        i = j;
+                        aux.add(new Tabla(i,((j)-i), inicio));
+                        i = j-1;
                         break;
                     }
                 }
@@ -59,7 +59,7 @@ public class TablasMaker {
                 for(int j = i+1; j<ram.length; j++){
                     if(ram[j] != ""){
                         aux.add(new Tabla(i,((j+1)-i), ""));
-                        i = j;
+                        i = j-1;
                         break;
                     }
                     if(j == ram.length-1){
